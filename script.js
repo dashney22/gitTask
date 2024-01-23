@@ -48,36 +48,51 @@ function displaySavedItems() {
 // Display saved items when the saveForLater.html page is loaded
 document.addEventListener('DOMContentLoaded', displaySavedItems);
 // Function to submit a comment
+
+// Add a counter variable
+let commentCounter = 1;
+
 function submitComment() {
-    // Get the comment from the textarea
-    const commentText = document.getElementById('comment').value;
+  // Get the comment from the textarea
+  const commentText = document.getElementById('comment').value;
 
-    // Check if the comment is not empty
-    if (commentText.trim() !== '') {
-        // Get the table body where comments will be displayed
-        const commentTableBody = document.getElementById('commentTableBody');
+  // Check if the comment is not empty
+  if (commentText.trim() !== '') {
+    // Get the table body where comments will be displayed
+    const commentTableBody = document.getElementById('commentTableBody');
 
-        // Create a new row
-        const newRow = commentTableBody.insertRow();
+    // Create a new row
+    const newRow = commentTableBody.insertRow();
 
-        // Create two cells for user and comment
-        const userCell = newRow.insertCell(0);
-        const commentCell = newRow.insertCell(1);
-        const actionCell = newRow.insertCell(2)
+    // Create two cells for user and comment
+    const userCell = newRow.insertCell(0);
+    const commentCell = newRow.insertCell(1);
+    const actionCell = newRow.insertCell(2);
 
-        // For simplicity, let's assume the user is 'Anonymous'
-        userCell.innerHTML = 'Anonymous';
-        commentCell.innerHTML = commentText;
-        actionCell.innerHTML = `<button class="btn btn-danger"> Delete </button>`
+    // Use commentCounter as a unique identifier
+    const commentId = `comment_${commentCounter++}`;
 
-        // Clear the textarea after submitting the comment
-        document.getElementById('comment').value = '';
-    } else {
-        // Show an alert if the comment is empty
-        alert('Please enter a comment before submitting.');
-    }
+    userCell.innerHTML = 'Anonymous';
+    commentCell.innerHTML = commentText;
+    actionCell.innerHTML = `<button class="btn btn-danger" onclick="deleteComment('${commentId}')">Delete</button>`;
+
+    // Clear the textarea after submitting the comment
+    document.getElementById('comment').value = '';
+  } else {
+    // Show an alert if the comment is empty
+    alert('Please enter a comment before submitting.');
+  }
 }
 
+// Comment delete function
+function deleteComment(commentId) {
+    console.log('Delete comment with ID:', commentId)
+    const commentRow = document.getElementById(commentId);
+    if (commentRow) {
+      commentRow.remove();
+    }
+  }
+  
 
 // Function to handle "Like" button click
 function likeAchievement(achievement) {
