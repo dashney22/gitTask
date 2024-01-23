@@ -21,13 +21,13 @@ body {
 .welcome-text {
   font-size: 42px;
   font-weight: bold;
+  color: black
 }
 .greatest-text {
   font-size: 18px;
 }
 /* image in the index.html page*/
 .bg-image {
-  background: url('images/ucl_messi.jpg') repeat; /* Make the background image repeat */
   height: 100vh;
   display: flex;
   flex-direction: column;
