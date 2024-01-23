@@ -1,0 +1,43 @@
+/*Sttyling the body*/
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Fixed background to prevent scrolling */
+  margin: 0; 
+  padding: 0; 
+  color:darkblue;
+}
+/*Nav bar active link*/
+.navbar .nav-item.active .nav-link {
+  background-color: #81888f;
+  color: white;
+  border-radius: 3px;
+}
+
+.bg-transparent {
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.welcome-text {
+  font-size: 42px;
+  font-weight: bold;
+}
+.greatest-text {
+  font-size: 18px;
+}
+/* image in the index.html page*/
+.bg-image {
+  background: url('images/ucl_messi.jpg') repeat; /* Make the background image repeat */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.8; 
+}
+/*Styling the text on top of the image*/
+.bg-image h1, .bg-image p {
+  color: white;
+  margin: 0;
+}

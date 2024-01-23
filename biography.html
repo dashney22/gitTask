@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="myStyle.css">
+  <title>Biography</title>
+</head>
+
+<body>
+  <header>
+    <!-- horizontal navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="biography.html">Biography</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link" href="achievements.html">Achievements</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link" href="saveForLater.html">
+              Save For Later<span id="savedItemsCountInNavbar" class="m-1 badge bg-secondary">1</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactUs.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5 mb-2 p-2">
+    <!--Biography List-->
+    <h1>Lionel Messi - Biography</h1>
+    <ul>
+      <li>Lionel Messi is an Argentine professional footballer.</li>
+      <li>He was born on June 24, 1987, in Rosario, Argentina.</li>
+      <li>Messi began his career with FC Barcelona.</li>
+      <li>He spent over 20 years at the club, becoming the all-time top scorer.</li>
+      <li>He has won numerous awards, including multiple FIFA Ballon d'Or awards.</li>
+      <li>In August 2021, Messi signed with Paris Saint-Germain (PSG) after leaving Barcelona due to financial
+        constraints faced by the club.</li>
+      <li>He has also had a successful international career with the Argentina national team, helping the team win the
+        2021 Copa America.</li>
+      <li>Messi is renowned for his dribbling, vision, and playmaking skills, which have earned him admiration and
+        respect from fans and fellow players worldwide.</li>
+      <li>Off the field, Messi is involved in various charitable initiatives and is known for his humble and unassuming
+        personality.</li>
+      <li>
+        "You have to fight to reach your dream. You have to sacrifice and work hard for it."
+        <a href="https://www.brainyquote.com/quotes/lionel_messi_553573" target="_blank">Leo Messi</a>
+      </li>
+    </ul>
+    <!--Testimonial-->
+    <div class="jumbotron">
+      <h2>Testimonial by Pep Guardiola</h2>
+      <p>
+        "Lionel Messi is the greatest footballer I've had the privilege to work with. His dedication, skill, and
+        determination are unmatched. Messi's presence on the field is a game-changer. He's not just a player; he's a
+        phenomenon."
+      </p>
+    </div>
+    <!--Text with blocks-->
+    <!-- Block 1 -->
+    <div class="jumbotron">
+      <h2>Early Life</h2>
+      <p>
+        Lionel Messi was born on June 24, 1987, in Rosario, Santa Fe, Argentina. He showed immense talent in football
+        from a young age.
+      </p>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="jumbotron">
+      <h2>Football Career</h2>
+      <p>
+        Messi joined FC Barcelona's youth academy, La Masia, and made his senior debut for the club in 2004. He spent
+        over two decades with Barcelona, achieving numerous titles.
+      </p>
+    </div>
+
+    <!--Form for subscription-->
+    <div class="jumbotron p-3 rounded-1" style="background-color: #f5f5f5;">
+      <h2 class="text-center">Subscribe to Lionel Messi's Newsletter</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+
+  </main>
+  <!-- Include the script.js file -->
+  <script src="script.js"></script>
+ <!--Footer with link to Messi's Fan page Instagram-->
+  <footer class="bg-dark text-center py-4">
+    <a href="https://www.instagram.com/lionelmessi/" class="text-white" target="_blank">Visit Lionel Messi's Instagram
+      Page</a>
+  </footer>
+</body>
+
+</html>
